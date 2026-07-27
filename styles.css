@@ -2,7 +2,7 @@
   --black: #f0ede6;
   --white: #0e0e0e;
   --cream: #1a1a1a;
-  --accent: #c8a96e;
+  --accent: #4fc7b8;
   --grey: #888880;
   --light-grey: #2e2e2e;
   --card-bg: #161616;
@@ -324,7 +324,7 @@ nav {
 
 .hobbies-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2px;
 }
 
@@ -789,4 +789,196 @@ footer {
   .hobbies-grid { grid-template-columns: 1fr; }
   .hobbies-strip { padding: 2rem 1.5rem; }
   .about { grid-template-columns: 1fr; gap: 1.5rem; padding: 3rem 1.5rem; }
+}
+
+/* ─── CITY LOG (Travel page) ─── */
+.city-log {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 5rem;
+}
+
+.city-block {
+  border: 1px solid var(--light-grey);
+  background: var(--card-bg);
+  padding: 1.6rem 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.city-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.city-name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+}
+
+.city-name {
+  font-size: 1.15rem;
+}
+
+.city-country {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+.city-rating {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.85rem;
+  color: var(--grey);
+}
+
+.city-rating span {
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.city-comments {
+  margin-top: 0.8rem;
+}
+
+.city-comment {
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--light-grey);
+}
+
+.city-comment:first-child { border-top: none; padding-top: 0.2rem; }
+
+.city-comment-date {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--light-grey);
+  margin-bottom: 0.3rem;
+}
+
+.city-comment-text {
+  font-size: 0.88rem;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+.map-note {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  color: var(--light-grey);
+  margin-top: 0.6rem;
+}
+
+.city-group-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 2.4rem 0 0.8rem;
+}
+
+.city-group-title:first-child { margin-top: 0; }
+
+@media (max-width: 900px) {
+  .city-log { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+
+/* ─── GOAL LOG (Life Goals page) ─── */
+.goal-log {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 5rem;
+}
+
+.goal-block {
+  border: 1px solid var(--light-grey);
+  background: var(--card-bg);
+  padding: 1.6rem 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.goal-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.goal-name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.goal-title {
+  font-size: 1.15rem;
+  font-weight: normal;
+}
+
+.goal-category {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.goal-status {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--light-grey);
+  color: var(--grey);
+  white-space: nowrap;
+}
+
+.goal-status--done {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0e0e0e;
+  font-weight: bold;
+}
+
+.goal-status--progress {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.goal-status--not-started {
+  border-color: var(--light-grey);
+  color: var(--light-grey);
+}
+
+.goal-target {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 0.7rem;
+}
+
+.goal-note {
+  font-size: 0.9rem;
+  color: var(--grey);
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+@media (max-width: 900px) {
+  .goal-log { padding-left: 1.5rem; padding-right: 1.5rem; }
 }

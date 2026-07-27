@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>[ blog name ] — Travel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,11 +14,8 @@
     <a href="index.html" class="nav-logo">[ blog name ]</a>
     <ul class="nav-links">
       <li><a href="index.html#song">Song</a></li>
-      <li><a href="index.html#food">Food</a></li>
-      <li><a href="index.html#map">Map</a></li>
-      <li><a href="index.html#markets">Markets</a></li>
-      <li><a href="index.html#books">Books</a></li>
-      <li><a href="index.html#lines">Lines</a></li>
+      <li><a href="index.html#hobbies">Hobbies</a></li>
+      <li><a href="pages.html">Pages</a></li>
       <li><a href="index.html#about">About</a></li>
     </ul>
   </nav>
@@ -26,37 +24,671 @@
   <div class="page-header">
     <a href="index.html#hobbies" class="page-back">← Back</a>
     <p class="page-label">Travel</p>
-    <h1>Cities and trips.<br><em>What stuck.</em></h1>
-    <p class="page-sub">City or country level, not a full itinerary. Just what was actually worth remembering about a place.</p>
+    <h1>Countries and cities.<br><em>What stuck.</em></h1>
+    <p class="page-sub">24 countries and territories, filled in on the map below. Every city has its own marker — click one for a rating and notes. Ratings are still being added; this is the working record, not the finished version.</p>
   </div>
 
-  <!-- TRAVEL GRID -->
-  <div class="food-grid">
+  <!-- WORLD MAP -->
+  <div class="map-wrapper">
+    <div class="map-legend">
+      <div class="legend-item"><span class="legend-dot" style="background:#4fc7b8"></span> Visited country</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#2e2e2e"></span> Not yet</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#4fc7b8;border:1px solid #f0ede6"></span> City marker</div>
+    </div>
+    <div id="travel-map"></div>
+    <p class="map-note">24 countries/territories, ~70 cities logged. Ratings and full notes still being filled in per city.</p>
+  </div>
 
-    <div class="food-card">
-      <div class="food-card-body" style="padding-top: 1.6rem;">
-        <div class="food-card-meta">
-          <span class="food-card-tag">Southeast Asia</span>
-          <span class="food-card-rating"></span>
-        </div>
-        <h3>Placeholder City</h3>
-        <p class="food-card-location">Placeholder Country</p>
-        <p>Placeholder note on what the trip was actually like — not a guide, just what stood out.</p>
-        <span class="food-card-date">Placeholder</span>
+  <hr class="divider" />
+
+  <!-- CITY LOG -->
+  <div class="section-header">
+    <h2 class="section-title">City Notes</h2>
+    <a href="#" class="section-link">All cities →</a>
+  </div>
+
+  <div class="city-log">
+
+    <p class="city-group-title">Taiwan</p>
+
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Taipei</h3><span class="city-country">Taiwan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
       </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">New Taipei</h3><span class="city-country">Taiwan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Kaohsiung</h3><span class="city-country">Taiwan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Tainan</h3><span class="city-country">Taiwan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Taichung</h3><span class="city-country">Taiwan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Taoyuan</h3><span class="city-country">Taiwan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Hsinchu</h3><span class="city-country">Taiwan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Keelung</h3><span class="city-country">Taiwan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Changhua</h3><span class="city-country">Taiwan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Pingtung</h3><span class="city-country">Taiwan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Yilan</h3><span class="city-country">Taiwan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Taitung</h3><span class="city-country">Taiwan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
     </div>
 
-    <div class="food-card">
-      <div class="food-card-body" style="padding-top: 1.6rem;">
-        <div class="food-card-meta">
-          <span class="food-card-tag">Southeast Asia</span>
-          <span class="food-card-rating"></span>
-        </div>
-        <h3>Placeholder City</h3>
-        <p class="food-card-location">Placeholder Country</p>
-        <p>Placeholder note. A second entry for the same trip or a separate one — city/country level detail only.</p>
-        <span class="food-card-date">Placeholder</span>
+    <p class="city-group-title">Macau</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Macau</h3><span class="city-country">Macau</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
       </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Thailand</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Bangkok</h3><span class="city-country">Thailand</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><div class="city-comment-date">Jul 2026</div><p class="city-comment-text">Grand Palace, Wat Arun, Chinatown, Chatuchak. Rating and full notes to follow.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Phuket</h3><span class="city-country">Thailand</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">China</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Chengdu</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><div class="city-comment-date">Jul 2026</div><p class="city-comment-text">Rating and full notes to follow.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Chongqing</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Xi'an</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Zhangjiajie</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Beijing</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Shanghai</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Hangzhou</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Jinhua</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Shenzhen</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Huanglong</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Jiuzhaigou</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Dali</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Lijiang</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Yuelongxueshan (Jade Dragon Snow Mountain). Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Erhai</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Kunming</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Dujiangyan</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Zhuhai</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Xinjiang</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Region, marker placed at Ürümqi. Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Sanya</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Harbin</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Guilin</h3><span class="city-country">China</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Japan</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Tokyo</h3><span class="city-country">Japan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Fuji</h3><span class="city-country">Japan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Osaka</h3><span class="city-country">Japan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Sapporo</h3><span class="city-country">Japan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Okinawa</h3><span class="city-country">Japan</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">South Korea</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Seoul</h3><span class="city-country">South Korea</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Singapore</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Singapore</h3><span class="city-country">Singapore</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Indonesia</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Bintan</h3><span class="city-country">Indonesia</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">United Arab Emirates</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Dubai</h3><span class="city-country">UAE</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">United Kingdom</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">London</h3><span class="city-country">UK</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Oxford</h3><span class="city-country">UK</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Cambridge</h3><span class="city-country">UK</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Stonehenge</h3><span class="city-country">UK</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">France</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Paris</h3><span class="city-country">France</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Mont-Saint-Michel</h3><span class="city-country">France</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Nice</h3><span class="city-country">France</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Lille</h3><span class="city-country">France</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Normandie</h3><span class="city-country">France</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Germany</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Berlin</h3><span class="city-country">Germany</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Belgium</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Brussels</h3><span class="city-country">Belgium</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Switzerland</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Lugano</h3><span class="city-country">Switzerland</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Monaco</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Monaco</h3><span class="city-country">Monaco</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Spain</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Barcelona</h3><span class="city-country">Spain</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Italy</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Rome</h3><span class="city-country">Italy</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Milan</h3><span class="city-country">Italy</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Como</h3><span class="city-country">Italy</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Greece</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Athens</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Mykonos</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Sounion</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Rhenia</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Delos</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Thessaloniki</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Mount Olympus</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Arachova</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Dion</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Litochoro</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Delphi</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Mycenae</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Nafplio</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Epidaurus</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Includes the Asklipieio sanctuary. Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Lavreotiki</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Corinth Canal</h3><span class="city-country">Greece</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Vatican City</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Vatican City</h3><span class="city-country">Vatican</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Czech Republic</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Prague</h3><span class="city-country">Czech Republic</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">United States</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Los Angeles</h3><span class="city-country">USA</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Canada</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Vancouver</h3><span class="city-country">Canada</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">UBC</h3><span class="city-country">Canada</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+
+    <p class="city-group-title">Australia</p>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Sydney</h3><span class="city-country">Australia</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
+    </div>
+    <div class="city-block">
+      <div class="city-block-header">
+        <div class="city-name-row"><h3 class="city-name">Melbourne</h3><span class="city-country">Australia</span></div>
+        <span class="city-rating"><span>—</span> / 10</span>
+      </div>
+      <div class="city-comments"><div class="city-comment"><p class="city-comment-text">Rating and notes pending.</p></div></div>
     </div>
 
   </div>
@@ -67,5 +699,166 @@
     <span class="footer-note">Hong Kong, 2026</span>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script>
+    const travelMap = L.map('travel-map', { zoomControl: true, scrollWheelZoom: false }).setView([30, 60], 2);
+
+    // Visited countries — matched against the "name" property in the country-borders GeoJSON below.
+    // Hong Kong and Macau aren't separate polygons in this dataset (folded into China), so they're
+    // not listed here — their city markers below still show up fine.
+    const visitedCountries = [
+      'Thailand', 'China', 'Japan', 'South Korea', 'Singapore', 'Indonesia',
+      'United Arab Emirates', 'United Kingdom', 'France', 'Germany', 'Belgium',
+      'Switzerland', 'Monaco', 'Spain', 'Italy', 'Greece', 'Vatican',
+      'Czech Republic', 'United States of America', 'Canada', 'Australia', 'Taiwan'
+    ];
+
+    function countryStyle(feature) {
+      const visited = visitedCountries.includes(feature.properties.name);
+      return {
+        fillColor: visited ? '#4fc7b8' : '#161616',
+        fillOpacity: visited ? 0.5 : 0.3,
+        color: visited ? '#4fc7b8' : '#2e2e2e',
+        weight: visited ? 1.2 : 0.6
+      };
+    }
+
+    fetch('https://cdn.jsdelivr.net/gh/johan/world.geo.json/countries.geo.json')
+      .then(res => res.json())
+      .then(data => {
+        L.geoJSON(data, { style: countryStyle }).addTo(travelMap);
+      })
+      .catch(() => {
+        console.warn('World country outlines failed to load — city markers still work.');
+      });
+
+    function makeCityIcon() {
+      return L.divIcon({
+        className: '',
+        html: `<div style="width:10px;height:10px;border-radius:50%;background:#4fc7b8;border:2px solid rgba(240,237,230,0.5);box-shadow:0 0 0 1px #4fc7b8"></div>`,
+        iconSize: [10, 10],
+        iconAnchor: [5, 5]
+      });
+    }
+
+    // Every city from the checklist. Rating is '—' until real ratings get added — update here
+    // and in the city-block cards above together so the map and the log stay in sync.
+    const cities = [
+      // Taiwan
+      { name: 'Taipei', country: 'Taiwan', lat: 25.0330, lng: 121.5654, rating: '—' },
+      { name: 'New Taipei', country: 'Taiwan', lat: 25.0170, lng: 121.4628, rating: '—' },
+      { name: 'Kaohsiung', country: 'Taiwan', lat: 22.6273, lng: 120.3014, rating: '—' },
+      { name: 'Tainan', country: 'Taiwan', lat: 22.9997, lng: 120.2270, rating: '—' },
+      { name: 'Taichung', country: 'Taiwan', lat: 24.1477, lng: 120.6736, rating: '—' },
+      { name: 'Taoyuan', country: 'Taiwan', lat: 24.9936, lng: 121.3010, rating: '—' },
+      { name: 'Hsinchu', country: 'Taiwan', lat: 24.8138, lng: 120.9675, rating: '—' },
+      { name: 'Keelung', country: 'Taiwan', lat: 25.1276, lng: 121.7392, rating: '—' },
+      { name: 'Changhua', country: 'Taiwan', lat: 24.0518, lng: 120.5161, rating: '—' },
+      { name: 'Pingtung', country: 'Taiwan', lat: 22.6763, lng: 120.4869, rating: '—' },
+      { name: 'Yilan', country: 'Taiwan', lat: 24.7021, lng: 121.7378, rating: '—' },
+      { name: 'Taitung', country: 'Taiwan', lat: 22.7583, lng: 121.1444, rating: '—' },
+      // Macau
+      { name: 'Macau', country: 'Macau', lat: 22.1987, lng: 113.5439, rating: '—' },
+      // Thailand
+      { name: 'Bangkok', country: 'Thailand', lat: 13.7563, lng: 100.5018, rating: '—' },
+      { name: 'Phuket', country: 'Thailand', lat: 7.8804, lng: 98.3923, rating: '—' },
+      // China
+      { name: 'Chengdu', country: 'China', lat: 30.5728, lng: 104.0668, rating: '—' },
+      { name: 'Chongqing', country: 'China', lat: 29.4316, lng: 106.9123, rating: '—' },
+      { name: "Xi'an", country: 'China', lat: 34.3416, lng: 108.9398, rating: '—' },
+      { name: 'Zhangjiajie', country: 'China', lat: 29.1170, lng: 110.4790, rating: '—' },
+      { name: 'Beijing', country: 'China', lat: 39.9042, lng: 116.4074, rating: '—' },
+      { name: 'Shanghai', country: 'China', lat: 31.2304, lng: 121.4737, rating: '—' },
+      { name: 'Hangzhou', country: 'China', lat: 30.2741, lng: 120.1551, rating: '—' },
+      { name: 'Jinhua', country: 'China', lat: 29.1028, lng: 119.6474, rating: '—' },
+      { name: 'Shenzhen', country: 'China', lat: 22.5431, lng: 114.0579, rating: '—' },
+      { name: 'Huanglong', country: 'China', lat: 32.7500, lng: 103.8200, rating: '—' },
+      { name: 'Jiuzhaigou', country: 'China', lat: 33.2569, lng: 103.9182, rating: '—' },
+      { name: 'Dali', country: 'China', lat: 25.6065, lng: 100.2679, rating: '—' },
+      { name: 'Lijiang', country: 'China', lat: 26.8721, lng: 100.2240, rating: '—' },
+      { name: 'Erhai', country: 'China', lat: 25.7000, lng: 100.1830, rating: '—' },
+      { name: 'Kunming', country: 'China', lat: 25.0389, lng: 102.7183, rating: '—' },
+      { name: 'Dujiangyan', country: 'China', lat: 30.9910, lng: 103.6180, rating: '—' },
+      { name: 'Zhuhai', country: 'China', lat: 22.2769, lng: 113.5678, rating: '—' },
+      { name: 'Xinjiang (Ürümqi)', country: 'China', lat: 43.8256, lng: 87.6168, rating: '—' },
+      { name: 'Sanya', country: 'China', lat: 18.2528, lng: 109.5119, rating: '—' },
+      { name: 'Harbin', country: 'China', lat: 45.8038, lng: 126.5349, rating: '—' },
+      { name: 'Guilin', country: 'China', lat: 25.2342, lng: 110.1799, rating: '—' },
+      // Japan
+      { name: 'Tokyo', country: 'Japan', lat: 35.6762, lng: 139.6503, rating: '—' },
+      { name: 'Fuji', country: 'Japan', lat: 35.3606, lng: 138.7274, rating: '—' },
+      { name: 'Osaka', country: 'Japan', lat: 34.6937, lng: 135.5023, rating: '—' },
+      { name: 'Sapporo', country: 'Japan', lat: 43.0618, lng: 141.3545, rating: '—' },
+      { name: 'Okinawa', country: 'Japan', lat: 26.2124, lng: 127.6809, rating: '—' },
+      // South Korea
+      { name: 'Seoul', country: 'South Korea', lat: 37.5665, lng: 126.9780, rating: '—' },
+      // Singapore
+      { name: 'Singapore', country: 'Singapore', lat: 1.3521, lng: 103.8198, rating: '—' },
+      // Indonesia
+      { name: 'Bintan', country: 'Indonesia', lat: 1.1400, lng: 104.4550, rating: '—' },
+      // UAE
+      { name: 'Dubai', country: 'UAE', lat: 25.2048, lng: 55.2708, rating: '—' },
+      // UK
+      { name: 'London', country: 'UK', lat: 51.5074, lng: -0.1278, rating: '—' },
+      { name: 'Oxford', country: 'UK', lat: 51.7520, lng: -1.2577, rating: '—' },
+      { name: 'Cambridge', country: 'UK', lat: 52.2053, lng: 0.1218, rating: '—' },
+      { name: 'Stonehenge', country: 'UK', lat: 51.1789, lng: -1.8262, rating: '—' },
+      // France
+      { name: 'Paris', country: 'France', lat: 48.8566, lng: 2.3522, rating: '—' },
+      { name: 'Mont-Saint-Michel', country: 'France', lat: 48.6361, lng: -1.5115, rating: '—' },
+      { name: 'Nice', country: 'France', lat: 43.7102, lng: 7.2620, rating: '—' },
+      { name: 'Lille', country: 'France', lat: 50.6292, lng: 3.0573, rating: '—' },
+      { name: 'Normandie', country: 'France', lat: 49.1829, lng: -0.3707, rating: '—' },
+      // Germany
+      { name: 'Berlin', country: 'Germany', lat: 52.5200, lng: 13.4050, rating: '—' },
+      // Belgium
+      { name: 'Brussels', country: 'Belgium', lat: 50.8503, lng: 4.3517, rating: '—' },
+      // Switzerland
+      { name: 'Lugano', country: 'Switzerland', lat: 46.0037, lng: 8.9511, rating: '—' },
+      // Monaco
+      { name: 'Monaco', country: 'Monaco', lat: 43.7384, lng: 7.4246, rating: '—' },
+      // Spain
+      { name: 'Barcelona', country: 'Spain', lat: 41.3874, lng: 2.1686, rating: '—' },
+      // Italy
+      { name: 'Rome', country: 'Italy', lat: 41.9028, lng: 12.4964, rating: '—' },
+      { name: 'Milan', country: 'Italy', lat: 45.4642, lng: 9.1900, rating: '—' },
+      { name: 'Como', country: 'Italy', lat: 45.8081, lng: 9.0852, rating: '—' },
+      // Greece
+      { name: 'Athens', country: 'Greece', lat: 37.9838, lng: 23.7275, rating: '—' },
+      { name: 'Mykonos', country: 'Greece', lat: 37.4467, lng: 25.3289, rating: '—' },
+      { name: 'Sounion', country: 'Greece', lat: 37.6500, lng: 24.0233, rating: '—' },
+      { name: 'Rhenia', country: 'Greece', lat: 37.4333, lng: 25.2667, rating: '—' },
+      { name: 'Delos', country: 'Greece', lat: 37.3961, lng: 25.2717, rating: '—' },
+      { name: 'Thessaloniki', country: 'Greece', lat: 40.6401, lng: 22.9444, rating: '—' },
+      { name: 'Mount Olympus', country: 'Greece', lat: 40.0853, lng: 22.3584, rating: '—' },
+      { name: 'Arachova', country: 'Greece', lat: 38.4833, lng: 22.5833, rating: '—' },
+      { name: 'Dion', country: 'Greece', lat: 40.1667, lng: 22.4833, rating: '—' },
+      { name: 'Litochoro', country: 'Greece', lat: 40.1017, lng: 22.5017, rating: '—' },
+      { name: 'Delphi', country: 'Greece', lat: 38.4824, lng: 22.5010, rating: '—' },
+      { name: 'Mycenae', country: 'Greece', lat: 37.7300, lng: 22.7550, rating: '—' },
+      { name: 'Nafplio', country: 'Greece', lat: 37.5673, lng: 22.8072, rating: '—' },
+      { name: 'Epidaurus', country: 'Greece', lat: 37.5967, lng: 23.0783, rating: '—' },
+      { name: 'Lavreotiki', country: 'Greece', lat: 37.7167, lng: 24.0500, rating: '—' },
+      { name: 'Corinth Canal', country: 'Greece', lat: 37.9350, lng: 22.9880, rating: '—' },
+      // Vatican
+      { name: 'Vatican City', country: 'Vatican', lat: 41.9029, lng: 12.4534, rating: '—' },
+      // Czech Republic
+      { name: 'Prague', country: 'Czech Republic', lat: 50.0755, lng: 14.4378, rating: '—' },
+      // USA
+      { name: 'Los Angeles', country: 'USA', lat: 34.0522, lng: -118.2437, rating: '—' },
+      // Canada
+      { name: 'Vancouver', country: 'Canada', lat: 49.2827, lng: -123.1207, rating: '—' },
+      { name: 'UBC', country: 'Canada', lat: 49.2606, lng: -123.2460, rating: '—' },
+      // Australia
+      { name: 'Sydney', country: 'Australia', lat: -33.8688, lng: 151.2093, rating: '—' },
+      { name: 'Melbourne', country: 'Australia', lat: -37.8136, lng: 144.9631, rating: '—' },
+    ];
+
+    cities.forEach(c => {
+      L.marker([c.lat, c.lng], { icon: makeCityIcon() })
+        .addTo(travelMap)
+        .bindPopup(`<strong>${c.name}</strong>, ${c.country}<br><span style="font-size:0.85em;color:#4fc7b8;font-weight:bold">${c.rating} / 10</span>`);
+    });
+  </script>
 </body>
 </html>
