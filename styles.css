@@ -558,7 +558,6 @@ footer {
 #site-map {
   height: 480px;
   border: 1px solid var(--light-grey);
-  filter: grayscale(100%) invert(90%) hue-rotate(180deg);
 }
 
 .map-legend {
