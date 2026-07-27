@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[ blog name ]</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">[ blog name ]</a>
+    <ul class="nav-links">
+      <li><a href="#song">Song</a></li>
+      <li><a href="#food">Food</a></li>
+      <li><a href="#map">Map</a></li>
+      <li><a href="#markets">Markets</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#lines">Lines</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-label">Hong Kong</p>
+    <h1>Honest notes<br>on places<br><em>worth eating.</em></h1>
+    <p class="hero-sub">A record of restaurants that are actually good — and a few that aren't. No sponsorships. No star chasing. Just the food.</p>
+    <a href="#food" class="hero-cta">Read the reviews</a>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SONG OF THE DAY -->
+  <div class="section-header" id="song">
+    <h2 class="section-title">Song of the Day</h2>
+    <a href="#" class="section-link">Full log →</a>
+  </div>
+
+  <div class="song-section">
+
+    <div class="song-featured">
+      <div class="song-featured-date">Today — 27 Jul 2026</div>
+      <div class="song-featured-main">
+        <div class="song-number">#001</div>
+        <div class="song-info">
+          <h3 class="song-title">STAY</h3>
+          <p class="song-artist">TKL</p>
+          <p class="song-note">Hard to explain why this one keeps coming back. Something in the production — the space between things rather than the things themselves.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="song-log">
+      <div class="song-row">
+        <span class="song-row-num">#000</span>
+        <span class="song-row-date">26 Jul</span>
+        <span class="song-row-title">SICKO MODE</span>
+        <span class="song-row-artist">Travis Scott</span>
+      </div>
+      <div class="song-row">
+        <span class="song-row-num">#−1</span>
+        <span class="song-row-date">25 Jul</span>
+        <span class="song-row-title">Lust for Life</span>
+        <span class="song-row-artist">Drake, A$AP Rocky</span>
+      </div>
+      <div class="song-row">
+        <span class="song-row-num">#−2</span>
+        <span class="song-row-date">24 Jul</span>
+        <span class="song-row-title">Let Nas Down</span>
+        <span class="song-row-artist">J. Cole</span>
+      </div>
+      <div class="song-row">
+        <span class="song-row-num">#−3</span>
+        <span class="song-row-date">23 Jul</span>
+        <span class="song-row-title">Neon Guts</span>
+        <span class="song-row-artist">Lil Uzi Vert ft. Pharrell</span>
+      </div>
+      <div class="song-row">
+        <span class="song-row-num">#−4</span>
+        <span class="song-row-date">22 Jul</span>
+        <span class="song-row-title">Otis</span>
+        <span class="song-row-artist">Jay-Z & Kanye West</span>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- FOOD SECTION -->
+  <div class="section-header" id="food">
+    <h2 class="section-title">Recent Reviews</h2>
+    <a href="#" class="section-link">All reviews →</a>
+  </div>
+
+  <div class="food-grid">
+
+    <div class="food-card">
+      <div class="food-card-img">Photo</div>
+      <div class="food-card-body">
+        <div class="food-card-meta">
+          <span class="food-card-tag">Japanese</span>
+          <span class="food-card-rating"><span>9.1</span> / 10</span>
+        </div>
+        <h3>Neighborhood Sushi</h3>
+        <p class="food-card-location">Wan Chai, Hong Kong</p>
+        <p>Omakase that punches above its price point. The chef does something interesting with aged fish — nothing gimmicky, just controlled. Worth the booking wait.</p>
+        <span class="food-card-date">July 2026</span>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="food-card-img">Photo</div>
+      <div class="food-card-body">
+        <div class="food-card-meta">
+          <span class="food-card-tag">Cantonese</span>
+          <span class="food-card-rating"><span>8.4</span> / 10</span>
+        </div>
+        <h3>Yung Kee</h3>
+        <p class="food-card-location">Central, Hong Kong</p>
+        <p>A classic that earns its reputation. The roast goose is as good as advertised. Go at lunch to avoid the tourist dinner crowd — the room is different.</p>
+        <span class="food-card-date">June 2026</span>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="food-card-img">Photo</div>
+      <div class="food-card-body">
+        <div class="food-card-meta">
+          <span class="food-card-tag">Thai</span>
+          <span class="food-card-rating"><span>8.7</span> / 10</span>
+        </div>
+        <h3>Chachawan</h3>
+        <p class="food-card-location">Sheung Wan, Hong Kong</p>
+        <p>Northeastern Thai done right. The larb here has actual heat and proper fermented funk — not the sanitised version. Loud room but you don't notice after the first round.</p>
+        <span class="food-card-date">May 2026</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MAP SECTION -->
+  <div class="section-header" id="map">
+    <h2 class="section-title">The Map</h2>
+    <a href="#" class="section-link">Restaurants · Bars · Places</a>
+  </div>
+
+  <div class="map-wrapper">
+    <div class="map-legend">
+      <div class="legend-item"><span class="legend-dot" style="background:#c8a96e"></span> Restaurant</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#6ea8c8"></span> Bar</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#8ec86e"></span> Cafe</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#c86e8e"></span> Travel</div>
+    </div>
+    <div id="site-map"></div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- HOBBIES -->
+  <div class="hobbies-strip" id="hobbies">
+    <div class="hobbies-inner">
+      <p class="hobbies-label">Other interests</p>
+      <div class="hobbies-grid">
+
+        <a class="hobby-card" href="poker.html">
+          <div class="hobby-icon">♠</div>
+          <h3>Poker</h3>
+          <p>Session logs, hand history, and GTO notes from the tables in HK and Macau.</p>
+          <span class="hobby-arrow">Read →</span>
+        </a>
+
+        <a class="hobby-card" href="basketball.html">
+          <div class="hobby-icon">🏀</div>
+          <h3>Basketball</h3>
+          <p>Game logs, training notes, and whatever the Hong Kong pickup scene looks like that week.</p>
+          <span class="hobby-arrow">Read →</span>
+        </a>
+
+        <a class="hobby-card" href="#markets">
+          <div class="hobby-icon">◈</div>
+          <h3>Work & Projects</h3>
+          <p>Strategy consulting. Thought leadership. A quant model nobody asked me to build.</p>
+          <span class="hobby-arrow">Read →</span>
+        </a>
+
+        <a class="hobby-card" href="#books">
+          <div class="hobby-icon">📖</div>
+          <h3>Books</h3>
+          <p>What I've read recently and whether it was worth it. Across history, finance, journalism, and whatever else.</p>
+          <span class="hobby-arrow">Read →</span>
+        </a>
+
+        <a class="hobby-card" href="learning.html">
+          <div class="hobby-icon">⌗</div>
+          <h3>Learning</h3>
+          <p>Things I'm actively studying — AI, markets, history. Notes on what's clicked and what hasn't.</p>
+          <span class="hobby-arrow">Read →</span>
+        </a>
+
+        <a class="hobby-card" href="currently.html">
+          <div class="hobby-icon">—</div>
+          <h3>Currently</h3>
+          <p>What's on the playlist, what I'm watching, what's been holding my attention. Updated monthly.</p>
+          <span class="hobby-arrow">Read →</span>
+        </a>
+
+        <a class="hobby-card" href="bar-log.html">
+          <div class="hobby-icon">◐</div>
+          <h3>Bar Log</h3>
+          <p>Cocktail bars, dive bars, whatever's worth a second visit. Same rules as the food log.</p>
+          <span class="hobby-arrow">Read →</span>
+        </a>
+
+        <a class="hobby-card" href="travel.html">
+          <div class="hobby-icon">✈</div>
+          <h3>Travel</h3>
+          <p>Cities and trips, city/country level. Not a full itinerary — just what stuck.</p>
+          <span class="hobby-arrow">Read →</span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOKS SECTION -->
+  <div class="section-header" id="books">
+    <h2 class="section-title">Recent Reads</h2>
+    <a href="#" class="section-link">All books →</a>
+  </div>
+
+  <div class="food-grid">
+
+    <div class="food-card">
+      <div class="food-card-body" style="padding-top: 1.6rem;">
+        <div class="food-card-meta">
+          <span class="food-card-tag">History</span>
+          <span class="food-card-rating"><span>9</span> / 10</span>
+        </div>
+        <h3>The Shadow of the Sun</h3>
+        <p class="food-card-location">Ryszard Kapuściński</p>
+        <p>Dispatches from post-colonial Africa. Kapuściński writes like a novelist but it's all real. The detail on how power actually moves through a place — not the official version — is the whole point.</p>
+        <span class="food-card-date">July 2026</span>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="food-card-body" style="padding-top: 1.6rem;">
+        <div class="food-card-meta">
+          <span class="food-card-tag">Ancient History</span>
+          <span class="food-card-rating"><span>8</span> / 10</span>
+        </div>
+        <h3>The Storm Before the Storm</h3>
+        <p class="food-card-location">Mike Duncan</p>
+        <p>The Republic's slow collapse before Caesar. What's interesting isn't who broke it — it's the decade when the norms stopped holding and everyone could see it but nobody acted.</p>
+        <span class="food-card-date">June 2026</span>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="food-card-body" style="padding-top: 1.6rem;">
+        <div class="food-card-meta">
+          <span class="food-card-tag">Finance</span>
+          <span class="food-card-rating"><span>8</span> / 10</span>
+        </div>
+        <h3>The Man Who Solved the Market</h3>
+        <p class="food-card-location">Gregory Zuckerman</p>
+        <p>Simons and Renaissance. The actual story is less romantic than the myth — it's about data infrastructure and hiring mathematicians, not about a genius insight. More instructive that way.</p>
+        <span class="food-card-date">May 2026</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MARKETS SECTION -->
+  <div class="section-header" id="markets">
+    <h2 class="section-title">Markets</h2>
+    <a href="#" class="section-link">All notes →</a>
+  </div>
+
+  <div class="markets-feed">
+
+    <div class="market-post">
+      <div class="market-post-header">
+        <span class="market-tag">HK Equities</span>
+        <span class="market-date">Jul 2026</span>
+      </div>
+      <h3 class="market-title">CLP Holdings and the problem of rate-of-return utilities in a high-rate world</h3>
+      <p class="market-body">The SCA gives CLP a permitted ~8% return on fixed assets. That sounds safe until you realise the reference rate that makes 8% attractive keeps shifting. EnergyAustralia is the more interesting drag — three years of write-downs on a business they overpaid for during a different energy regime. The question isn't whether management knows this. It's whether the structure allows them to do anything about it fast enough.</p>
+      <a href="#" class="market-read">Continue reading →</a>
+    </div>
+
+    <div class="market-post">
+      <div class="market-post-header">
+        <span class="market-tag">Tech / AI</span>
+        <span class="market-date">Jun 2026</span>
+      </div>
+      <h3 class="market-title">The x402 protocol and what micropayments actually change</h3>
+      <p class="market-body">Revenue pools in AI infrastructure are migrating toward whoever controls the transaction layer, not the model layer. x402 is early but the direction is right: if agents are making payments autonomously, the payment rail is infrastructure. That's a different business than anyone was building for two years ago.</p>
+      <a href="#" class="market-read">Continue reading →</a>
+    </div>
+
+    <div class="market-post">
+      <div class="market-post-header">
+        <span class="market-tag">Macro</span>
+        <span class="market-date">Jun 2026</span>
+      </div>
+      <h3 class="market-title">Why cross-grid M&A premiums are compressing even as deal volume rises</h3>
+      <p class="market-body">More deals, lower average premiums. The obvious read is more competition for assets. The less obvious read is that buyers are getting more disciplined after the 2021–22 vintage proved expensive. The cross-grid convergence thesis holds but the arbitrage is getting priced in faster than it was.</p>
+      <a href="#" class="market-read">Continue reading →</a>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- LINES SECTION -->
+  <div class="section-header" id="lines">
+    <h2 class="section-title">Lines</h2>
+    <a href="#" class="section-link">All lines →</a>
+  </div>
+
+  <div class="lines-feed">
+
+    <div class="line-entry">
+      <blockquote class="line-text">"The sun also rises."</blockquote>
+      <div class="line-source">Hemingway — <em>The Sun Also Rises</em> <span class="line-date">Jul 2026</span></div>
+    </div>
+
+    <div class="line-entry">
+      <blockquote class="line-text">"Africa is a vast territory, and whatever you say about it the opposite is also true."</blockquote>
+      <div class="line-source">Ryszard Kapuściński — <em>The Shadow of the Sun</em> <span class="line-date">Jul 2026</span></div>
+    </div>
+
+    <div class="line-entry">
+      <blockquote class="line-text">"The Roman Republic did not die because it had to. It died because enough Romans chose short-term advantage over the long-term health of the system they depended on."</blockquote>
+      <div class="line-source">Mike Duncan — <em>The Storm Before the Storm</em> <span class="line-date">Jun 2026</span></div>
+    </div>
+
+    <div class="line-entry">
+      <blockquote class="line-text">"Yeah, I will get to the top."</blockquote>
+      <div class="line-source">— <span class="line-date">Jun 2026</span></div>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-label">About</div>
+    <div class="about-right">
+      <h2>Based in<br>Hong Kong.<br><em>Eating everywhere.</em></h2>
+      <p>
+        This is a personal record of restaurants I've been to and found worth writing about.
+        The ratings are my own and calibrated against each other. Nothing is sponsored or gifted.
+      </p>
+      <p style="margin-top: 1rem;">
+        When a place is bad I'll say so. When it's good I'll say why specifically, not just that it's good.
+      </p>
+      <div class="about-tags">
+        <span class="about-tag">Hong Kong</span>
+        <span class="about-tag">Cantonese</span>
+        <span class="about-tag">Japanese</span>
+        <span class="about-tag">Thai</span>
+        <span class="about-tag">Travel</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-name">[ blog name ]</span>
+    <span class="footer-note">Hong Kong, 2026</span>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script>
+    const map = L.map('site-map', { zoomControl: true, scrollWheelZoom: false }).setView([22.28, 114.16], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    function makeIcon(color) {
+      return L.divIcon({
+        className: '',
+        html: `<div style="width:12px;height:12px;border-radius:50%;background:${color};border:2px solid rgba(255,255,255,0.3);box-shadow:0 0 0 1px ${color}"></div>`,
+        iconSize: [12, 12],
+        iconAnchor: [6, 6]
+      });
+    }
+
+    const restaurants = [
+      { name: 'Yung Kee', lat: 22.2827, lng: 114.1546, note: '8.4 — Roast goose. Go at lunch.' },
+      { name: 'Chachawan', lat: 22.2848, lng: 114.1497, note: '8.7 — Northeastern Thai. The larb.' },
+      { name: 'Neighborhood Sushi', lat: 22.2798, lng: 114.1728, note: '9.1 — Omakase. Book ahead.' },
+    ];
+
+    const bars = [
+      { name: 'The Old Man', lat: 22.2831, lng: 114.1540, note: 'Hemingway-themed. Good cocktails.' },
+      { name: 'Quinary', lat: 22.2845, lng: 114.1555, note: 'Molecular cocktails. Overhyped but solid.' },
+    ];
+
+    restaurants.forEach(r => {
+      L.marker([r.lat, r.lng], { icon: makeIcon('#c8a96e') })
+        .addTo(map).bindPopup(`<strong>${r.name}</strong><br><span style="font-size:0.8em;color:#888">${r.note}</span>`);
+    });
+
+    bars.forEach(b => {
+      L.marker([b.lat, b.lng], { icon: makeIcon('#6ea8c8') })
+        .addTo(map).bindPopup(`<strong>${b.name}</strong><br><span style="font-size:0.8em;color:#888">${b.note}</span>`);
+    });
+  </script>
+</body>
+</html>

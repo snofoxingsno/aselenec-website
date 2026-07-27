@@ -1,0 +1,793 @@
+:root {
+  --black: #f0ede6;
+  --white: #0e0e0e;
+  --cream: #1a1a1a;
+  --accent: #c8a96e;
+  --grey: #888880;
+  --light-grey: #2e2e2e;
+  --card-bg: #161616;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+}
+
+/* ─── NAV ─── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 3rem;
+  background: var(--white);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.nav-logo {
+  font-size: 1.05rem;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--black); }
+
+/* ─── PAGE HEADER (for standalone sub-pages) ─── */
+.page-header {
+  padding-top: 120px;
+  padding-bottom: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-back {
+  display: inline-block;
+  margin-bottom: 1.6rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey);
+  text-decoration: none;
+}
+
+.page-back:hover { color: var(--accent); }
+
+.page-label {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+}
+
+.page-header h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: normal;
+  line-height: 1.15;
+  color: var(--black);
+  max-width: 760px;
+}
+
+.page-header h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.page-sub {
+  margin-top: 1.4rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.9rem;
+  color: var(--grey);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* ─── HERO ─── */
+.hero {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-label {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-weight: normal;
+  line-height: 1.1;
+  color: var(--black);
+  max-width: 700px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero-sub {
+  margin-top: 1.8rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.9rem;
+  color: var(--grey);
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  display: inline-block;
+  margin-top: 2.4rem;
+  padding: 0.8rem 2rem;
+  background: var(--accent);
+  color: #0e0e0e;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.hero-cta:hover { background: #f0ede6; }
+
+/* ─── DIVIDER ─── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--light-grey);
+  margin: 0 3rem;
+}
+
+/* ─── SECTION HEADER ─── */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 3rem 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+.section-link {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey);
+  text-decoration: none;
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.section-link:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ─── FOOD / CARD GRID (also used for Books, Bar Log, Travel) ─── */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 0 3rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.food-card {
+  background: var(--card-bg);
+  border: 1px solid var(--light-grey);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.food-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.food-card-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-grey);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.food-card-body {
+  padding: 1.2rem 1.4rem 1.4rem;
+}
+
+.food-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.food-card-tag {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.food-card-rating {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  color: var(--grey);
+}
+
+.food-card-rating span {
+  color: var(--black);
+  font-weight: bold;
+}
+
+.food-card h3 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 0.3rem;
+}
+
+.food-card-location {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  color: var(--grey);
+  margin-bottom: 0.8rem;
+}
+
+.food-card p {
+  font-size: 0.88rem;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+.food-card-date {
+  display: block;
+  margin-top: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--light-grey);
+  text-transform: uppercase;
+}
+
+/* ─── HOBBIES STRIP ─── */
+.hobbies-strip {
+  background: #1a1a1a;
+  padding: 3rem;
+  border-top: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.hobbies-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hobbies-label {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.hobby-card {
+  background: #222;
+  padding: 2rem;
+  transition: background 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hobby-card:hover { background: #2a2a2a; }
+
+.hobby-icon {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.hobby-card h3 {
+  font-size: 1.05rem;
+  font-weight: normal;
+  color: #f0ede6;
+  margin-bottom: 0.5rem;
+}
+
+.hobby-card p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.78rem;
+  color: #888;
+  line-height: 1.6;
+}
+
+.hobby-arrow {
+  display: block;
+  margin-top: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ─── ABOUT ─── */
+.about {
+  padding: 5rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-label {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-top: 0.3rem;
+}
+
+.about-right h2 {
+  font-size: 1.9rem;
+  font-weight: normal;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.about-right p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.88rem;
+  color: var(--grey);
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.8rem;
+}
+
+.about-tag {
+  border: 1px solid var(--light-grey);
+  padding: 0.3rem 0.8rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  border-top: 1px solid var(--light-grey);
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-name {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+.footer-note {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.7rem;
+  color: var(--light-grey);
+}
+
+/* ─── SONG OF THE DAY ─── */
+.song-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 0 3rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.song-featured {
+  border: 1px solid var(--light-grey);
+  padding: 2rem;
+  background: var(--card-bg);
+}
+
+.song-featured-date {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.8rem;
+}
+
+.song-featured-main {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.song-number {
+  font-size: 2.5rem;
+  color: var(--light-grey);
+  font-weight: normal;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.song-title {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.3rem;
+}
+
+.song-artist {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+}
+
+.song-note {
+  font-size: 0.88rem;
+  color: var(--grey);
+  line-height: 1.7;
+}
+
+.song-log {
+  border: 1px solid var(--light-grey);
+  border-left: none;
+}
+
+.song-row {
+  display: grid;
+  grid-template-columns: 40px 60px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.4rem;
+  border-bottom: 1px solid var(--light-grey);
+  transition: background 0.15s;
+}
+
+.song-row:last-child { border-bottom: none; }
+.song-row:hover { background: var(--cream); }
+
+.song-row-num {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.68rem;
+  color: var(--light-grey);
+}
+
+.song-row-date {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  color: var(--grey);
+}
+
+.song-row-title {
+  font-size: 0.95rem;
+}
+
+.song-row-artist {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.75rem;
+  color: var(--grey);
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .song-section { grid-template-columns: 1fr; padding-left: 1.5rem; padding-right: 1.5rem; }
+  .song-log { border-left: 1px solid var(--light-grey); border-top: none; }
+}
+
+/* ─── MAP ─── */
+.map-wrapper {
+  padding: 0 3rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#site-map {
+  height: 480px;
+  border: 1px solid var(--light-grey);
+  filter: grayscale(100%) invert(90%) hue-rotate(180deg);
+}
+
+.map-legend {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ─── FEED (Markets, Basketball, Poker, Learning) ─── */
+.markets-feed {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.market-post {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.market-post:first-child { border-top: 1px solid var(--light-grey); }
+
+.market-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+
+.market-tag {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.market-date {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.68rem;
+  color: var(--grey);
+}
+
+.market-title {
+  font-size: 1.15rem;
+  font-weight: normal;
+  margin-bottom: 0.8rem;
+  max-width: 720px;
+  line-height: 1.4;
+}
+
+.market-body {
+  font-size: 0.9rem;
+  color: var(--grey);
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+.market-read {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.market-read:hover { color: var(--black); }
+
+/* ─── STAT ROW (Poker / Basketball summary strips) ─── */
+.stat-row {
+  display: flex;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 3rem;
+  flex-wrap: wrap;
+}
+
+.stat-block {
+  flex: 1;
+  min-width: 140px;
+  padding: 1.2rem 1.6rem;
+  border: 1px solid var(--light-grey);
+  border-right: none;
+}
+
+.stat-block:last-child { border-right: 1px solid var(--light-grey); }
+
+.stat-value {
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+
+.stat-label {
+  margin-top: 0.4rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+@media (max-width: 900px) {
+  .stat-row { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .stat-block { border-right: 1px solid var(--light-grey); flex: 1 1 45%; }
+}
+
+/* ─── LINES / NOW GRID ─── */
+.lines-feed {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.line-entry {
+  padding: 2.2rem 0;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.line-entry:first-child { border-top: 1px solid var(--light-grey); }
+
+.line-text {
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1.5;
+  color: var(--black);
+  max-width: 780px;
+  margin-bottom: 1rem;
+  quotes: none;
+}
+
+.line-source {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.78rem;
+  color: var(--grey);
+}
+
+.line-date {
+  color: var(--light-grey);
+  margin-left: 0.8rem;
+}
+
+/* ─── NOW PAGE ─── */
+.now-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 4rem;
+}
+
+.now-block {
+  border: 1px solid var(--light-grey);
+  padding: 1.8rem;
+  background: var(--card-bg);
+}
+
+.now-block-label {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.now-block h3 {
+  font-size: 1.15rem;
+  font-weight: normal;
+  margin-bottom: 0.4rem;
+}
+
+.now-block p {
+  font-size: 0.85rem;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+.now-updated {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--light-grey);
+}
+
+@media (max-width: 900px) {
+  .map-wrapper, .markets-feed, .lines-feed, .now-grid { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .now-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  nav { padding: 1.2rem 1.5rem; }
+  .nav-links { gap: 1.5rem; }
+  .hero, .section-header, .divider, footer, .page-header { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .food-grid { grid-template-columns: 1fr; padding-left: 1.5rem; padding-right: 1.5rem; }
+  .hobbies-grid { grid-template-columns: 1fr; }
+  .hobbies-strip { padding: 2rem 1.5rem; }
+  .about { grid-template-columns: 1fr; gap: 1.5rem; padding: 3rem 1.5rem; }
+}
