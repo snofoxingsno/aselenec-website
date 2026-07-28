@@ -555,7 +555,8 @@ footer {
   position: relative;
 }
 
-#site-map {
+#site-map,
+#travel-map {
   height: 480px;
   border: 1px solid var(--light-grey);
 }
