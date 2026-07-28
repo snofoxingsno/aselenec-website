@@ -533,6 +533,17 @@ footer {
 
 .song-row-title {
   font-size: 0.95rem;
+  color: var(--black);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.song-row-title:hover {
+  color: var(--accent);
+}
+
+.song-embed {
+  margin-top: 1.6rem;
 }
 
 .song-row-artist {
