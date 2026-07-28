@@ -241,6 +241,12 @@ nav {
   text-transform: uppercase;
 }
 
+.food-card-img-icon {
+  font-size: 1.8rem;
+  color: var(--accent);
+  opacity: 0.55;
+}
+
 .food-card-body {
   padding: 1.2rem 1.4rem 1.4rem;
 }
