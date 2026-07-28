@@ -514,10 +514,27 @@ footer {
   padding: 1rem 1.4rem;
   border-bottom: 1px solid var(--light-grey);
   transition: background 0.15s;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .song-row:last-child { border-bottom: none; }
 .song-row:hover { background: var(--cream); }
+.song-row:hover .song-row-title { color: var(--accent); }
+
+.song-archive-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 3rem 5rem;
+}
+
+@media (max-width: 900px) {
+  .song-archive-grid { grid-template-columns: 1fr; padding-left: 1.5rem; padding-right: 1.5rem; }
+}
 
 .song-row-num {
   font-family: 'Times New Roman', Times, serif;
