@@ -469,12 +469,12 @@ footer {
 
 .song-featured-main {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: flex-start;
 }
 
 .song-number {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: var(--light-grey);
   font-weight: normal;
   line-height: 1;
@@ -482,17 +482,17 @@ footer {
 }
 
 .song-title {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: normal;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 .song-artist {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   color: var(--accent);
   letter-spacing: 0.06em;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .song-note {
@@ -506,22 +506,66 @@ footer {
   border-left: none;
 }
 
+.song-log-item {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.song-log-item:last-child { border-bottom: none; }
+
 .song-row {
   display: grid;
-  grid-template-columns: 40px 60px 1fr auto;
+  grid-template-columns: 40px 56px 1fr auto;
   gap: 1rem;
   align-items: center;
   padding: 1rem 1.4rem;
-  border-bottom: 1px solid var(--light-grey);
   transition: background 0.15s;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
 }
 
-.song-row:last-child { border-bottom: none; }
 .song-row:hover { background: var(--cream); }
 .song-row:hover .song-row-title { color: var(--accent); }
+
+.song-row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.song-play-btn {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--light-grey);
+  background: transparent;
+  color: var(--black);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.song-play-btn:hover,
+.song-play-btn.is-playing {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.song-row-embed {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+  padding: 0 1.4rem;
+}
+
+.song-row-embed.open {
+  max-height: 90px;
+  padding: 0 1.4rem 1rem;
+}
 
 .song-archive-grid {
   display: grid;
@@ -549,25 +593,20 @@ footer {
 }
 
 .song-row-title {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--black);
-  text-decoration: none;
   transition: color 0.2s;
 }
 
-.song-row-title:hover {
-  color: var(--accent);
-}
-
 .song-embed {
-  margin-top: 1.6rem;
+  margin-top: 1.2rem;
 }
 
 .song-row-artist {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--grey);
-  text-align: right;
+  text-align: left;
 }
 
 @media (max-width: 900px) {

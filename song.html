@@ -39,17 +39,23 @@
         </div>
       </div>
       <div class="song-embed">
-        <iframe style="border-radius: 8px;" src="https://open.spotify.com/embed/track/0eAuGrXyGFYwur9ARUe7LJ?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius: 8px;" src="https://open.spotify.com/embed/track/0eAuGrXyGFYwur9ARUe7LJ?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </div>
 
     <div class="song-log">
-      <a class="song-row" href="https://open.spotify.com/track/7z3PblAN3dH1JMewiRydkZ" target="_blank" rel="noopener">
-        <span class="song-row-num">#001</span>
-        <span class="song-row-date">27 Jul</span>
-        <span class="song-row-title">GIRLS</span>
-        <span class="song-row-artist">The Kid LAROI</span>
-      </a>
+      <div class="song-log-item">
+        <div class="song-row">
+          <span class="song-row-num">#001</span>
+          <span class="song-row-date">27 Jul</span>
+          <div class="song-row-text">
+            <span class="song-row-title">GIRLS</span>
+            <span class="song-row-artist">The Kid LAROI</span>
+          </div>
+          <button class="song-play-btn" id="row001-btn" onclick="toggleSongEmbed('row001','7z3PblAN3dH1JMewiRydkZ')" aria-label="Play GIRLS by The Kid LAROI">▶</button>
+        </div>
+        <div class="song-row-embed" id="row001"></div>
+      </div>
     </div>
 
   </div>
@@ -60,5 +66,22 @@
     <span class="footer-note">Hong Kong, 2026</span>
   </footer>
 
+  <script>
+    function toggleSongEmbed(id, trackId) {
+      const wrap = document.getElementById(id);
+      const btn = document.getElementById(id + '-btn');
+      if (wrap.classList.contains('open')) {
+        wrap.classList.remove('open');
+        wrap.innerHTML = '';
+        btn.textContent = '▶';
+        btn.classList.remove('is-playing');
+      } else {
+        wrap.innerHTML = '<iframe style="border-radius:8px;" src="https://open.spotify.com/embed/track/' + trackId + '?utm_source=generator&theme=0" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
+        wrap.classList.add('open');
+        btn.textContent = '❚❚';
+        btn.classList.add('is-playing');
+      }
+    }
+  </script>
 </body>
 </html>
