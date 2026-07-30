@@ -24,52 +24,148 @@
     <a href="index.html#hobbies" class="page-back">← Back</a>
     <p class="page-label">Poker</p>
     <h1>Session logs.<br><em>Wins, losses, leaks.</em></h1>
-    <p class="page-sub">Live cash and the occasional tournament, HK and Macau. No venue names where it matters. Numbers are rounded, results are honest.</p>
+    <p class="page-sub">Live cash, HK and Macau. No venue names where it matters. Numbers are rounded, results are honest.</p>
+  </div>
+
+  <!-- PLAYER PROFILE -->
+  <div class="profile-wrap">
+    <div class="profile-block">
+      <div class="profile-row">
+        <span class="profile-key">Style</span>
+        <span class="profile-val">Intuitive Pressure Player — exploitative LAG. Not GTO, not a maniac. Reads situations, finds bluffs in spots others miss, applies consistent pressure with draws and position.</span>
+      </div>
+      <div class="profile-row">
+        <span class="profile-key">Format</span>
+        <span class="profile-val">No Limit Texas Hold'em — live cash games</span>
+      </div>
+      <div class="profile-row">
+        <span class="profile-key">Simulated VPIP</span>
+        <span class="profile-val">35% (100-hand RNG sample) — above GTO (22–28% for 6-max), manageable for LAG style</span>
+      </div>
+    </div>
   </div>
 
   <!-- STATS -->
   <div class="stat-row">
     <div class="stat-block">
-      <div class="stat-value">—</div>
-      <div class="stat-label">Sessions logged</div>
+      <div class="stat-value">6</div>
+      <div class="stat-label">Sessions Played</div>
     </div>
     <div class="stat-block">
-      <div class="stat-value">—</div>
-      <div class="stat-label">Hours played</div>
+      <div class="stat-value">83%</div>
+      <div class="stat-label">Win Rate</div>
     </div>
     <div class="stat-block">
-      <div class="stat-value">—</div>
-      <div class="stat-label">Net, YTD</div>
+      <div class="stat-value">17x</div>
+      <div class="stat-label">Biggest Multiplier</div>
     </div>
     <div class="stat-block">
-      <div class="stat-value">—</div>
-      <div class="stat-label">Biggest leak</div>
+      <div class="stat-value">+</div>
+      <div class="stat-label">Overall ROI</div>
     </div>
   </div>
 
-  <!-- SESSION FEED -->
-  <div class="markets-feed">
+  <!-- SESSION LOG -->
+  <div class="section-header">
+    <h2 class="section-title">Session Log</h2>
+  </div>
 
-    <div class="market-post">
-      <div class="market-post-header">
-        <span class="market-tag">Cash — 2/5</span>
-        <span class="market-date">Placeholder</span>
-      </div>
-      <h3 class="market-title">Session #001 — a title once there's something to say</h3>
-      <p class="market-body">Placeholder entry. Real session logs will follow this format: stakes, table dynamic, one or two hands worth writing about, and an honest read on how the session actually went — not just the result.</p>
-      <a href="#" class="market-read">Continue reading →</a>
-    </div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Result</th>
+          <th>Buy-in Units</th>
+          <th>Cash-out</th>
+          <th>Multiplier</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td class="result-win">✅ Win</td>
+          <td>1x</td>
+          <td>17x</td>
+          <td>17x</td>
+          <td>Cleared the table</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="result-even">➖ Breakeven</td>
+          <td>2x</td>
+          <td>2x</td>
+          <td>1x</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="result-win">✅ Win</td>
+          <td>3x</td>
+          <td>6.25x</td>
+          <td>2.1x</td>
+          <td>One rebuy</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="result-win">✅ Win</td>
+          <td>6x</td>
+          <td>7x</td>
+          <td>1.17x</td>
+          <td>11hr night, two sessions combined. Ran bad first, bounced back as biggest winner</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="result-win">✅ Win</td>
+          <td>2x</td>
+          <td>7.75x</td>
+          <td>3.9x</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td class="result-win">✅ Win</td>
+          <td>11.5x</td>
+          <td>12.2x</td>
+          <td>1.06x</td>
+          <td>Two sessions same night, combined</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="table-note">Buy-in unit = standard single buy-in for the game.</p>
+  </div>
 
-    <div class="market-post">
-      <div class="market-post-header">
-        <span class="market-tag">GTO Notes</span>
-        <span class="market-date">Placeholder</span>
-      </div>
-      <h3 class="market-title">A leak worth writing down</h3>
-      <p class="market-body">Placeholder entry. This slot is for the study side — preflop ranges, a spot that got misplayed, a solver output that changed how a line gets played going forward.</p>
-      <a href="#" class="market-read">Continue reading →</a>
-    </div>
+  <!-- STATS SUMMARY -->
+  <div class="section-header">
+    <h2 class="section-title">Stats Summary</h2>
+  </div>
 
+  <div class="table-wrap">
+    <table class="data-table stats-table">
+      <tbody>
+        <tr><td>Sessions played</td><td>6</td></tr>
+        <tr><td>Wins</td><td>5</td></tr>
+        <tr><td>Losses</td><td>0</td></tr>
+        <tr><td>Breakeven</td><td>1</td></tr>
+        <tr><td>Win rate</td><td>83%</td></tr>
+        <tr><td>Biggest multiplier</td><td>17x (Session 1)</td></tr>
+        <tr><td>Overall ROI</td><td>Profitable across all tracked sessions</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TOOLS & STUDY -->
+  <div class="section-header">
+    <h2 class="section-title">Tools & Study</h2>
+  </div>
+
+  <div class="simple-list-wrap">
+    <ul class="simple-list">
+      <li>GTO Wizard Premium — postflop analysis and preflop drilling</li>
+      <li>Preflop Wizard — mobile range drilling</li>
+      <li>Live sim sessions with RNG-based dealer (Python) for VPIP tracking</li>
+    </ul>
   </div>
 
   <!-- FOOTER -->

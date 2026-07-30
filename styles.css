@@ -1056,3 +1056,123 @@ footer {
 @media (max-width: 900px) {
   .goal-log { padding-left: 1.5rem; padding-right: 1.5rem; }
 }
+
+/* ─── PROFILE BLOCK (Poker / Basketball player profiles) ─── */
+.profile-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 3rem;
+}
+
+.profile-block {
+  border: 1px solid var(--light-grey);
+  background: var(--card-bg);
+  padding: 1.8rem 2rem;
+}
+
+.profile-row {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--light-grey);
+  align-items: baseline;
+}
+
+.profile-row:last-child { border-bottom: none; }
+
+.profile-key {
+  flex: 0 0 170px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.profile-val {
+  font-size: 0.9rem;
+  color: var(--grey);
+  line-height: 1.7;
+}
+
+/* ─── DATA TABLES (Session logs, stats summaries) ─── */
+.table-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 3rem;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.data-table th {
+  text-align: left;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--light-grey);
+  white-space: nowrap;
+}
+
+.data-table td {
+  font-size: 0.85rem;
+  color: var(--grey);
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--light-grey);
+  vertical-align: top;
+}
+
+.data-table tr:last-child td { border-bottom: none; }
+
+.data-table th:first-child,
+.data-table td:first-child {
+  padding-left: 0;
+}
+
+.data-table.stats-table td:first-child {
+  color: var(--black);
+  width: 220px;
+}
+
+.result-win { color: var(--accent); }
+.result-even { color: var(--grey); }
+
+.table-note {
+  margin-top: 0.8rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.7rem;
+  color: var(--light-grey);
+}
+
+/* ─── SIMPLE LIST (Tools & Study) ─── */
+.simple-list-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 5rem;
+}
+
+.simple-list {
+  list-style: none;
+}
+
+.simple-list li {
+  font-size: 0.9rem;
+  color: var(--grey);
+  line-height: 1.8;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.simple-list li:last-child { border-bottom: none; }
+
+@media (max-width: 900px) {
+  .profile-wrap, .table-wrap, .simple-list-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .profile-row { flex-direction: column; gap: 0.3rem; }
+  .profile-key { flex: none; }
+}
